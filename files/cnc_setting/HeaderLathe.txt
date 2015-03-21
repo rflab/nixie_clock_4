@@ -1,0 +1,9 @@
+%
+{ProgNo}
+({MakeDate} {MakeTime})
+({MakeUser} MADE {MakeNCD} FROM {MakeDXF} AND {MakeCondition})
+(LatheView={LatheDiameter},{LatheZmax},{LatheZmin})
+(ToolPos={ToolPosX},,{ToolPosZ})
+{G90orG91}G54G99
+M8
+G96{Spindle}M3

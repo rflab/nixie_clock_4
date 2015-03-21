@@ -1,0 +1,77 @@
+##
+## NCVC:切削条件ﾌｧｲﾙ
+##
+#--> Page:1
+Spindle             =     3000     ; 主軸回転数
+Feed                =      400.000 ; 切削送り
+ZFeed               =       50.000 ; Z軸送り
+ZG0Stop             =        1.000 ; R点
+ZCut                =       -0.100 ; Z軸切り込み
+G92X                =        0.000 ; 切削原点(G92X)
+G92Y                =        0.000 ; 切削原点(G92Y)
+G92Z                =        1.000 ; 切削原点(G92Z)
+XRev                =        0     ; X軸反転
+YRev                =        0     ; Y軸反転
+Header              = ".\Header.txt" ; ｶｽﾀﾑﾍｯﾀﾞｰ
+Footer              = ".\Footer.txt" ; ｶｽﾀﾑﾌｯﾀﾞｰ
+#--> Page:2
+ProgSet             =        1     ; Ｏ番号生成
+ProgNo              =        1     ; ﾌﾟﾛｸﾞﾗﾑ番号
+ProgAuto            =        0     ; おまかせ番号
+LineAdd             =        0     ; 行番号追加
+LineForm            = "N%04d"      ; 行番号書式
+LineAddType         =        1     ; 行番号倍率
+EOB                 = ""           ; EOB
+G90                 =        0     ; 位置指令(0:G90,1:G91)
+ZReturn             =        1     ; Z軸復帰(0:ｲﾆｼｬﾙ,1:R点)
+GClip               =        1     ; ﾓｰﾀﾞﾙ
+DisableSpindle      =        0     ; Sﾊﾟﾗﾒｰﾀを生成しない
+#--> Page:3
+Dot                 =        0     ; 座標表記(0:小数点,1:1/1000)
+FDot                =        0     ; Fﾊﾟﾗﾒｰﾀ表記(0:小数点,1:1/1000,2:整数)
+ZeroCut             =        1     ; 小数点以下のｾﾞﾛｶｯﾄ
+CircleCode          =        1     ; 円ﾃﾞｰﾀの切削(0:G02,1:G03)
+CircleIJ            =        0     ; 円弧指示(0:R,1:I/J)
+CircleHalf          =        0     ; 全円は2分割
+Ellipse             =        0.500 ; 楕円公差
+EllipseFlg          =        1     ; 長径と短径が等しい楕円は円とみなす
+#--> Page:4
+MakeEnd             =        1     ; 加工済み深さの指示(0:なし,1:ｵﾌｾｯﾄ,2:固定Z)
+MakeEndValue        =        1.000 ; ｵﾌｾｯﾄ値 or 固定Z値
+MakeEndFeed         =       50.000 ; 加工済み深さのZ送り速度
+Deep                =        1     ; 深彫を行う
+DeepFinal           =       -5.000 ; 最終切り込み
+ZStep               =       -0.500 ; Z軸切り込みｽﾃｯﾌﾟ
+DeepAProcess        =        1     ; 深彫切削手順(0:全体,1:一筆)
+DeepCProcess        =        1     ; 深彫切削方向(0:往復,1:一方)
+DeepZProcess        =        1     ; R点へのZ軸復帰(0:早送り,1:切削送り)
+Helical             =        1     ; 円ﾃﾞｰﾀをﾍﾘｶﾙ切削
+DeepFinishSet       =        1     ; 最終Z値仕上げ適用
+FinishSpindle       =     4800     ; 仕上げ回転数
+FinishFeed          =      100.000 ; 仕上げ送り
+#--> Page:5
+DrillSpindle        =     5000     ; 穴加工回転数
+DrillFeed           =       60.000 ; 穴加工送り
+DrillR              =        1.000 ; 穴加工R点
+DrillZ              =      -14.000 ; 穴加工切り込み
+DrillMatch          =        0     ; 穴加工同一座標無視
+Dwell               =       10     ; ﾄﾞｳｪﾙ時間
+DwellFormat         =        0     ; ﾄﾞｳｪﾙ時間表記(0:小数点,1:整数)
+DrillProcess        =        0     ; 穴加工手順(0:先,1:後,2:のみ)
+DrillZProcess       =        0     ; Z軸復帰(0:G81|G82,1:G85|G89)
+DrillCircle         =        0     ; 円ﾃﾞｰﾀも穴加工
+DrillCircleR        =       40.000 ; 対象半径
+DrillSort           =        0     ; ｸﾞﾙｰﾋﾟﾝｸﾞ(0:昇順,1:降順)
+DrillBreak          =        1     ; 大きさごとにｺﾒﾝﾄを埋め込む
+DrillCircleProcess  =        0     ; 実点と円ﾃﾞｰﾀとの手順(0:無視,1:先,2:後)
+#--> Page:6
+LayerComment        =        1     ; ﾚｲﾔごとにｺﾒﾝﾄを埋め込む
+MoveZ               =        1     ; 移動ﾚｲﾔのZ軸(0:そのまま,1:R点,2:ｲﾆｼｬﾙ点)
+CustomMoveB         = ""           ; ｶｽﾀﾑ移動ｺｰﾄﾞ(前)
+CustomMoveA         = ""           ; ｶｽﾀﾑ移動ｺｰﾄﾞ(後)
+L0Cycle             =        0     ; 固定ｻｲｸﾙ中はL0出力
+#--> Page:7
+Tolerance           =        0.001 ; 同一座標と見なす許容差
+ToleranceProcess    =        0     ; 超えた時の動作(0:Z上昇G00移動,1:G01補間)
+DrillOptimaize      =        0     ; 穴加工基準軸(0:なし,1:X,2:Y)
+DrillMargin         =        1.000 ; 穴加工同一軸上と見なす許容差

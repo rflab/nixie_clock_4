@@ -1,0 +1,36 @@
+EESchema-DOCLIB  Version 2.0  Date: 2014/09/09 2:23:01
+#
+$CMP 2SA
+D 2SA sot23
+K Low Noise Audio PNP Transistor
+F http://www.datasheetcatalog.org/datasheet/toshiba/905.pdf
+$ENDCMP
+#
+$CMP 2SC
+D 2SC1815, 50V Vce, 0.15A Ic, Low Noise Audio NPN Transistor,TO-92
+K Low Noise Audio NPN Transistor 2SC1815
+$ENDCMP
+#
+$CMP 3-TERMINAL_REGULATOR
+D Linear Regulator +5V
+K POWER REGUL
+F regulator\lm78xx.pdf
+$ENDCMP
+#
+$CMP ATMEGA328P
+D ATMEGA328P, TQFP32, 32k Flash, 2kB SRAM, 1kB EEPROM
+K AVR 8bit Microcontroller MegaAVR
+F http://www.atmel.com/dyn/resources/prod_documents/doc8271.pdf
+$ENDCMP
+#
+$CMP CP1
+D Condensateur polarise
+$ENDCMP
+#
+$CMP MY_3_TERMINAL_REGULATOR
+D Linear Regulator +5V
+K POWER REGUL
+F regulator\lm78xx.pdf
+$ENDCMP
+#
+#End Doc Library

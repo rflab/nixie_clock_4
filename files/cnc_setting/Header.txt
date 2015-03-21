@@ -1,0 +1,6 @@
+%
+({MakeDate} {MakeTime})
+({MakeUser} MADE {MakeNCD} FROM {MakeDXF} AND {MakeCondition})
+{G90orG91}G54{G92_Initial}
+M08
+{Spindle}M03
